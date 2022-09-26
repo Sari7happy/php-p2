@@ -1,10 +1,8 @@
 <?php 
-    $num01 =123;
-    $num02 =1.23;
+    $string_a ="hello,World";
 
-    echo gettype($num01)."\n";
-    echo gettype($num02)."\n";
-    var_dump($num02)."\n";
+    echo $string_a."\n";
+    echo gettype($string_a)."\n";
 
-//phpの数値型には整数型のinteger型、小数点のfloat型、double型（小数点以下の桁数を多く使える。）
-//小数点型を調べるのはvar_dumpを使う
+
+//文字列は””で結ぶ。stringを使う。データ型はgettype($string_a)."\n"で調べられる。
