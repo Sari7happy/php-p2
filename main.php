@@ -1,10 +1,10 @@
 <?php 
-$NUM =7;
-$Num=8;
+$return =1;
+$class=8;
 
 
-echo $NUM."\n";
-echo $Num."\n";
+echo $return."\n";
+echo $class."\n";
 
 
-// phpは大文字、小文字区別できる。
+// phpは予約語を変数にするのはしないほうが良い。エラーを引き起こすから。class,returnなど
