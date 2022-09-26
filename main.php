@@ -1,8 +1,11 @@
 <?php 
-    $string_a ="hello,World";
+    $a =10;
+    $b =1;
+    $bool01 =($a >$b);
 
-    echo $string_a."\n";
-    echo gettype($string_a)."\n";
+
+    echo $bool01."\n";
+    echo gettype($bool01)."\n";
 
 
-//文字列は””で結ぶ。stringを使う。データ型はgettype($string_a)."\n"で調べられる。
+//true.falseのやり方 bool型
