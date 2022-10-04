@@ -6,6 +6,8 @@
     $name = "good";
     echo $name ."morning";
     // 繋ぐときはドットで繋ぐ
+    $smile ="bad";
+    echo $smile ."smell";
 
 
 ?>
