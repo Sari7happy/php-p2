@@ -29,3 +29,9 @@ SELECT*FROM players;
 UPDATE players SET level =level +1 WHERE id =12;
 SELECT*FROM players;
 -- 更新
+DELETE FROM players WHERE id =13;
+SELECT*FROM players;
+--1部 削除
+DELETE FROM players WHERE id >= 11;
+SELECT * FROM players;
+-- 複数削除
