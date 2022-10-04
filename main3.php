@@ -1,7 +1,13 @@
 
-    <!-- 太文字はbタグ -->
 <?php
-    $output1 ="hello saru";
-    $output2 ="sara";
-    echo $output1." ".$output2;
+$n = 100;
+if($n == 1){
+    echo "すき";
+}elseif($n == 2){
+    echo "どっちでもない";
+
+}else{
+    echo "嫌い";
+}
+
 ?>
