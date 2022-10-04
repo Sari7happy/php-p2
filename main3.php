@@ -1,14 +1,14 @@
 <?php
-for($i =1;$i <=10;$i++){
-    echo $i."\n";
-}
-
-
-
-
-$i =1;
-while($i <=10){
-    echo $i."\n";
-    $i++;
+$value = "02";
+switch($value){
+    case "01":
+        print("01の処理");
+        break;
+    case "02":
+        print("02の処理");
+        break;
+    default:
+        print("デフォルトの処理");
+        break;
 }
 ?>
