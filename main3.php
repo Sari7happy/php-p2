@@ -1,13 +1,14 @@
-
+<select name="age">
 <?php
-$n = 100;
-if($n == 1){
-    echo "すき";
-}elseif($n == 2){
-    echo "どっちでもない";
+$i =1;
+while($i <=50){
+    // 50以下を繰り返す。
+echo "<option>".$i."歳</option>";
+$i++;
 
-}else{
-    echo "嫌い";
 }
-
 ?>
+</select>
+
+
+
