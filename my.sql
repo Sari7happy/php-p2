@@ -17,3 +17,15 @@ SELECT * FROM players ORDER BY LEVEL DESC;
 -- DESCでレベル高い方から並び替え
 INSERT into players(id,name,level,job_id) VALUES(11,"霧島1号",1,1);
 -- 新しくメンバーを追加する方法
+INSERT INTO players (id,name,level,job_id)
+VALUES
+			(13,"霧島3号",1,1),
+			(14,"霧島4号",1,1)
+            
+;
+SELECT*FROM players;
+-- 2行追加
+
+UPDATE players SET level =level +1 WHERE id =12;
+SELECT*FROM players;
+-- 更新
