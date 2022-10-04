@@ -1,6 +1,7 @@
-<b>
+
     <!-- 太文字はbタグ -->
 <?php
-    echo "hello saru";
+    $output1 ="hello saru";
+    $output2 ="sara";
+    echo $output1." ".$output2;
 ?>
-</b>
