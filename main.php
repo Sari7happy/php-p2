@@ -1,11 +1,7 @@
-<?php 
-    $a =10;
-    $b =1;
-    $bool01 =($a >$b);
-
-
-    echo $bool01."\n";
-    echo gettype($bool01)."\n";
-
-
-//true.falseのやり方 bool型
+<?php
+    echo "hello smile<br>";
+    echo "旅に出かけよう<br>";
+    echo "Hello paiza<br>";
+    echo (100*30)+3;
+    // 計算するときは数値として扱われる、””で描こうと文字として扱われる
+?>
