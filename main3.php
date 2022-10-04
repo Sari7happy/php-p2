@@ -1,9 +1,9 @@
 <select name="age">
 <?php
-$i =1;
-while($i <=50){
+$i =1926;
+while($i <=2023){
     // 50以下を繰り返す。
-echo "<option>".$i."歳</option>";
+echo "<option>".$i."年</option>";
 $i++;
 
 }
