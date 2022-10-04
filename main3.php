@@ -1,6 +1,10 @@
-<?php
-    $name =trim(fgets(STDIN));
-    // STDINは標準入力。fgetsはデータ１行とる、trimは空白や改行を削除する命令
-    echo "hello " .$name;
 
+<?php
+    $greeting = "Hello";
+    // echo $greeting ."<br>";
+    // echo $greeting ."<br>";
+    // echo $greeting ."<br>";
+    for($i =0; $i <10;$i++){
+        echo $greeting ."<br>";
+    }
 ?>
