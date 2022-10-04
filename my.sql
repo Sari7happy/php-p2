@@ -11,3 +11,7 @@ SELECT name,level FROM players WHERE level >=7;
 -- レベル7以上の名前とレベル表示
 SELECT COUNT(*)FROM players;
 -- カウント機能
+SELECT *FROM players ORDER BY LEVEL;
+-- レベル順に並び替え
+SELECT *FROM players ORDER BY LEVEL DESC;
+-- DESCでレベル高い方から並び替え
