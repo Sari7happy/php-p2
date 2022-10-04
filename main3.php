@@ -1,14 +1,14 @@
-<select name="age">
 <?php
-$i =1926;
-while($i <=2023){
-    // 50以下を繰り返す。
-echo "<option>".$i."年</option>";
-$i++;
+for($i =1;$i <=10;$i++){
+    echo $i."\n";
+}
 
+
+
+
+$i =1;
+while($i <=10){
+    echo $i."\n";
+    $i++;
 }
 ?>
-</select>
-
-
-
