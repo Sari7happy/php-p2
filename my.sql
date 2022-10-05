@@ -37,3 +37,28 @@ SELECT * FROM players;
 -- 複数削除
 SELECT* FROM players INNER JOIN jobs ON jobs.id =players.job_id;
 -- 2つを結合
+
+LECT name,level,vitality FROM players INNER JOIN jobs ON jobs.id =players.job_id;
+-- 特定の値を取り出す
+
+SELECT job_id, job_name, COUNT(*) FROM players INNER JOIN jobs ON jobs.id =players.job_id GROUP by job_id;
+-- 職業名と名前かカウントできる
+
+-- 日次・月次のアクセス数を求める
+SELECT Date_format(startTime,'%Y-%m'),count(logID)
+FROM eventlog
+
+Group by Date_format(startTime,'%Y-%m');
+
+アクティブユーザー数と文字入れれる、カウントできる
+SELECT COUNT(*) AS アクティブユーザー数
+FROM users;
+
+-- nullは空っぽをあらわす
+-- 本当に使ってるユーザー数-null=は現在の利用者数
+SELECT COUNT(*) AS アクティブユーザー数
+FROM users
+where deleted_at Is null;
+-- DISTINCTは重複なく表示するときに使う
+SELECT DISTINCT 取引先名1
+FROM 取引先
