@@ -35,3 +35,5 @@ SELECT*FROM players;
 DELETE FROM players WHERE id >= 11;
 SELECT * FROM players;
 -- 複数削除
+SELECT* FROM players INNER JOIN jobs ON jobs.id =players.job_id;
+-- 2つを結合
