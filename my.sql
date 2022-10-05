@@ -98,3 +98,52 @@ FROM
 	INNER JOIN events ON events.eventID = eventlog.eventID
 GROUP BY eventlog.userID
 HAVING SUM(events.increase_exp) >=3000;	
+--------------------------------------------------------
+SELECT
+	eventlog.userID AS ユーザーID,
+    starttime,
+    endtime
+    
+FROM
+	eventlog;
+	-- 開始時刻と終了時刻求める
+    ---------------------------------------
+    SELECT
+	eventlog.userID AS ユーザーID,
+    min(starttime) as 開始日,
+    max(endtime) as 終了日
+   
+    
+FROM
+	eventlog
+group by eventlog.userID;
+-- 開始日と終了日求めるMAX ,MIN
+
+------------------------------------------
+-- 日付に関する計算、生年月日から年齢調べる
+SELECT
+	userID AS ユーザーID,
+	YEAR(CURRENT_DATE()) AS 現在年,
+	birth AS 生年月日,
+	year(CURRENT_DATE()) -YEAR(birth) AS 数え年,
+    TIMESTAMPDIFF(YEAR,birth,CURRENT_DATE()) AS 満年齢
+FROM
+	users;
+
+    ----------------------------------------
+    -- 特定の値を指定して取り出す。
+    -- テキスト検索
+SELECT
+	userID,
+	startTime,
+	events.event_summary
+FROM
+	eventlog
+	INNER JOIN events ON events.eventID = eventlog.eventID
+where events.event_stage<> 0 
+-- event_stage<> 0 はタイトルなどを省いて映し出す
+    and events.event_summary LIKE '%との闘い'
+order by
+    userID,starttime;
+
+
