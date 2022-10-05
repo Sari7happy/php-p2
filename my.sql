@@ -62,3 +62,39 @@ where deleted_at Is null;
 -- DISTINCTは重複なく表示するときに使う
 SELECT DISTINCT 取引先名1
 FROM 取引先
+
+-- いろいろな集計,合計値はSUMを使う
+SELECT
+	eventlog.userID AS ユーザーID,
+	sum(events.increase_exp) AS 獲得経験値
+FROM
+	eventlog
+	INNER JOIN events ON events.eventID = eventlog.eventID
+group by eventlog.userID;	
+
+-- いろいろな集計、平均はavgで求められる
+SELECT
+	eventlog.userID AS ユーザーID,
+	sum(events.increase_exp) AS 合計,
+	avg(events.increase_exp) AS 平均
+FROM
+	eventlog
+	INNER JOIN events ON events.eventID = eventlog.eventID
+group by eventlog.userID;	
+
+------------------------------------------------------------
+- 1. FROM 対象テーブルからデータを取り出す
+- 2. WHERE 条件に一致するレコードを絞り込み
+- 3. GROUP BY グループ化
+- 4. HAVING 集計結果から絞り込み
+- 5. SELECT 指定したカラムだけを表示
+
+SELECT
+	eventlog.userID AS ユーザーID,
+    SUM(events.increase_exp) AS 合計,
+    AVG(events.increase_exp) AS 平均
+FROM
+	eventlog
+	INNER JOIN events ON events.eventID = eventlog.eventID
+GROUP BY eventlog.userID
+HAVING SUM(events.increase_exp) >=3000;	
